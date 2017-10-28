@@ -20,13 +20,6 @@ public class Charactermoving : MonoBehaviour {
 		is_ground = true;
 		rb = GetComponent<Rigidbody>();
 
-
-<<<<<<< HEAD
-
-	
-=======
-		
->>>>>>> 923a2dfced4710b9a953957160f5e9028e9145ab
 	}
 	
 	// Update is called once per frame
@@ -34,26 +27,17 @@ public class Charactermoving : MonoBehaviour {
 	{	/*if (!Physics.Raycast(transform.position,Vector3.down)){
 			is_ground = true;
 		}*/
-		rb.AddForce (0f,-400f,0f);
+		rb.AddForce (0f, -400f, 0f);
 		float moveHirozental = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 		Vector3 movement = new Vector3 (moveHirozental, 0, moveVertical);
 		rb.velocity = movement * movingspeed;
-<<<<<<< HEAD
 
-	
-	}
-	void OnCollisionEnter (Collision col) {
-		if (col.gameObject.name == "Water") {
-			Destroy (col.gameObject);
-		}
-	}
-=======
 		if (Input.GetKey (KeyCode.D)) {
-			transform.rotation = Quaternion.Euler(0, 180, 0);
+			transform.rotation = Quaternion.Euler (0, 180, 0);
 		} 
 		if (Input.GetKey (KeyCode.A)) {
-			transform.rotation = Quaternion.Euler(0, 0, 0);
+			transform.rotation = Quaternion.Euler (0, 0, 0);
 		}
 		if (Input.GetKey (KeyCode.S)) {
 			transform.rotation = Quaternion.Euler (0, 270, 0);
@@ -61,23 +45,29 @@ public class Charactermoving : MonoBehaviour {
 		if (Input.GetKey (KeyCode.W)) {
 			transform.rotation = Quaternion.Euler (0, 90, 0);
 		}
-		if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W) ){
+		if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
 			transform.rotation = Quaternion.Euler (0, 45, 0);
 		}
-		if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) ){
+		if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.S)) {
 			transform.rotation = Quaternion.Euler (0, 315, 0);
 		}
-		if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W) ){
+		if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
 			transform.rotation = Quaternion.Euler (0, 135, 0);
 		}
-		if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S) ){
+		if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.S)) {
 			transform.rotation = Quaternion.Euler (0, 225, 0);
 		}
-		if (Input.GetKey(KeyCode.Space)&& is_ground){
-			rb.AddForce (0f,jumpingforce,0f);
+		if (Input.GetKey (KeyCode.Space) && is_ground) {
+			rb.AddForce (0f, jumpingforce, 0f);
 			// = false;
-			}
->>>>>>> 923a2dfced4710b9a953957160f5e9028e9145ab
+		}
+	}
+
+	void OnCollisionEnter (Collision col) {
+		if (col.gameObject.name == "Water") {
+			Destroy (col.gameObject);
+		}
+	}
 }
 
-}	
+	
