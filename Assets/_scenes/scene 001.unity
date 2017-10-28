@@ -441,7 +441,7 @@ MonoBehaviour:
   pushPower: 2
   movingspeed: 25
   is_ground: 0
-  jumpingforce: 10000
+  jumpingforce: 1000
 --- !u!4 &1742399528 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}

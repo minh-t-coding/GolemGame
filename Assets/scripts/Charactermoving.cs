@@ -26,7 +26,7 @@ public class Charactermoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate ()
-	{	if (transform.position.y < 0.02f){
+	{	if (!Physics.Raycast(transform.position,Vector3.up,10f)){
 			is_ground = true;
 		}
 		rb.AddForce (0f,-400f,0f);
