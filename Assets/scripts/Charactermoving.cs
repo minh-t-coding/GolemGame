@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -77,12 +78,5 @@ public class Charactermoving : MonoBehaviour {
 		}
 
 	}
-
-	void OnCollisionEnter (Collision col) {
-		if (col.gameObject.name == "Water") {
-			Destroy (col.gameObject);
-		}
-	}
 }
 
-	
