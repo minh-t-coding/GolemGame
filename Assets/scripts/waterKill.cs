@@ -12,7 +12,7 @@ public class waterKill : MonoBehaviour {
 	void Update () {
 	}
 
-	void OnCollisionEnter(Collision col) {
+	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.CompareTag("Player")) {
 			Destroy(col.gameObject);
 		}
