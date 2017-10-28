@@ -62,12 +62,7 @@ public class Charactermoving : MonoBehaviour {
 			// = false;
 		}
 	}
-
-	void OnCollisionEnter (Collision col) {
-		if (col.gameObject.name == "Water") {
-			Destroy (col.gameObject);
-		}
-	}
+		
 }
 
 	
