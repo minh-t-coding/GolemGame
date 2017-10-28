@@ -12,13 +12,21 @@ public class sliderPhysics : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Vector3 fwd = transform.TransformDirection (Vector3.forward);
+		//Vector3 fwd = transform.TransformDirection (Vector3.forward);
 
 	}
 
-	void OnTriggerEnter(Collider other) {
-		if (other.CompareTag ("stopper")) {
-			rb.velocity = new Vector3 (0,0,0);
+	void OnCollisionEnter(Collision collision) {
+		if (gameObject.CompareTag ("Player")) {
+			Vector3 fwd = transform.TransformDirection (Vector3.forward);
+		} else {
+			rb.velocity = Vector3.zero;
 		}
 	}
+
+	//void OnTriggerEnter(Collider other) {
+	//	if (other.CompareTag ("Player")) {
+	//		Vector3 fwd = transform.TransformDirection (Vector3.forward);
+	//	}
+	//}
 }
