@@ -1,3 +1,4 @@
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 
 public class Charactermoving : MonoBehaviour {
 	private Rigidbody rb;
+	Animator ani;
+
 	public float pushPower = 2.0F;
 
 	[SerializeField]
@@ -15,11 +18,12 @@ public class Charactermoving : MonoBehaviour {
 	float jumpingforce;
 
 
+
 	// Use this for initialization
 	void Start () {
 		is_ground = true;
 		rb = GetComponent<Rigidbody>();
-
+		ani = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -35,34 +39,44 @@ public class Charactermoving : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.D)) {
 			transform.rotation = Quaternion.Euler (0, 180, 0);
+			ani.SetBool ("run", true);
 		} 
-		if (Input.GetKey (KeyCode.A)) {
+		else if (Input.GetKey (KeyCode.A)) {
 			transform.rotation = Quaternion.Euler (0, 0, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.S)) {
+		else if (Input.GetKey (KeyCode.S)) {
 			transform.rotation = Quaternion.Euler (0, 270, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.W)) {
+		else if (Input.GetKey (KeyCode.W)) {
 			transform.rotation = Quaternion.Euler (0, 90, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
+		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
 			transform.rotation = Quaternion.Euler (0, 45, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.S)) {
+		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.S)) {
 			transform.rotation = Quaternion.Euler (0, 315, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
+		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
 			transform.rotation = Quaternion.Euler (0, 135, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.S)) {
+		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.S)) {
 			transform.rotation = Quaternion.Euler (0, 225, 0);
+			ani.SetBool ("run", true);
 		}
-		if (Input.GetKey (KeyCode.Space) && is_ground) {
+		else if (Input.GetKey (KeyCode.Space) && is_ground) {
 			rb.AddForce (0f, jumpingforce, 0f);
+			ani.SetBool ("run", true);
 			// = false;
+		} else {
+			ani.SetBool ("run", false);
 		}
+
 	}
-		
 }
 
-	
