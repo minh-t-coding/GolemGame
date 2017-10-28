@@ -215,7 +215,7 @@ ModelImporter:
       name: standing_still
       takeName: standing_still
       firstFrame: -1
-      lastFrame: 0
+      lastFrame: 15.4
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
