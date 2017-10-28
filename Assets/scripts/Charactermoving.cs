@@ -26,9 +26,9 @@ public class Charactermoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate ()
-	{	if (!Physics.Raycast(transform.position,Vector3.down)){
+	{	/*if (!Physics.Raycast(transform.position,Vector3.down)){
 			is_ground = true;
-		}
+		}*/
 		rb.AddForce (0f,-400f,0f);
 		float moveHirozental = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
@@ -60,7 +60,7 @@ public class Charactermoving : MonoBehaviour {
 		}
 		if (Input.GetKey(KeyCode.Space)&& is_ground){
 			rb.AddForce (0f,jumpingforce,0f);
-			is_ground = false;
+			// = false;
 			}
 }
 
