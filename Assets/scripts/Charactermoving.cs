@@ -5,7 +5,7 @@ using UnityEngine;
 public class Charactermoving : MonoBehaviour {
 
 	private Rigidbody rb;
-	public GameObject dragged;
+	public float pushPower = 2.0F;
 
 	[SerializeField]
 	public float movingspeed;
@@ -15,7 +15,7 @@ public class Charactermoving : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
-		col = GetComponent<Collider> ();
+
 
 
 		
@@ -23,20 +23,11 @@ public class Charactermoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate(){
-		//if (Input.GetKey(KeyCode.UpArrow) or Input.GetKey(KeyCode.LeftArrow) or Input.GetKey(KeyCode.RightArrow) ){
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
-		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+		float moveHirozental = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+		Vector3 movement = new Vector3 (moveHirozental,0,moveVertical);
 		rb.velocity = movement * movingspeed;
 
-
-	}
-
-	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "dragged") {
-			rb.velocity = new Vector3(0f, 3000f, 0f);
-		
-		}
 	
 	}
 }
