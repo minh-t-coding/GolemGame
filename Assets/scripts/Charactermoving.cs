@@ -5,7 +5,6 @@ using UnityEngine;
 public class Charactermoving : MonoBehaviour {
 
 	private Rigidbody rb;
-	public GameObject dragged;
 	public float pushPower = 2.0F;
 
 	[SerializeField]
@@ -24,24 +23,36 @@ public class Charactermoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate(){
-		//if (Input.GetKey(KeyCode.UpArrow) or Input.GetKey(KeyCode.LeftArrow) or Input.GetKey(KeyCode.RightArrow) ){
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
-		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+		if (Input.GetKey(KeyCode.UpArrow)){
+		Vector3 movement = new Vector3 (0,0,1f);
 		rb.velocity = movement * movingspeed;
-
-
-	}
-
-	void OnControllerColliderHit(ControllerColliderHit hit){
-			Rigidbody body = hit.collider.attachedRigidbody;
-			if (body == null || body.isKinematic)
-				return;
-
-			Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-			body.velocity = pushDir * pushPower;
+			Invoke ("stop_moving",0.001f);
+			transform.Rotate (0,0,-180f);
+		}
+		if (Input.GetKey(KeyCode.DownArrow)){
+			Vector3 movement = new Vector3 (0,0,-1f);
+			rb.velocity = movement * movingspeed;
+			Invoke ("stop_moving",0.001f);
+			transform.Rotate (0,0,-180f);
+		}
+		if (Input.GetKey(KeyCode.RightArrow)){
+			Vector3 movement = new Vector3 (1f,0,0);
+			rb.velocity = movement * movingspeed;
+			Invoke ("stop_moving",0.001f);
+			transform.Rotate (0,0,-180f);
+		}
+		if (Input.GetKey(KeyCode.LeftArrow)){
+			Vector3 movement = new Vector3 (-1f,0,0);
+			rb.velocity = movement * movingspeed;
+			Invoke ("stop_moving",0.001f);
+			transform.Rotate (0,0,180f);
+		}
 
 		}
+	void stop_moving (){
+		rb.velocity = new Vector3 (0,0,0);
+	
+	}
 	
 	}
 
