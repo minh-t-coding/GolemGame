@@ -18,7 +18,7 @@ public class Charactermoving : MonoBehaviour {
 
 
 
-		
+	
 	}
 	
 	// Update is called once per frame
@@ -29,5 +29,10 @@ public class Charactermoving : MonoBehaviour {
 		rb.velocity = movement * movingspeed;
 
 	
+	}
+	void OnCollisionEnter (Collision col) {
+		if (col.gameObject.name == "Water") {
+			Destroy (col.gameObject);
+		}
 	}
 }
