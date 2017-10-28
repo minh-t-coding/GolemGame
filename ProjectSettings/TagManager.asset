@@ -6,6 +6,8 @@ TagManager:
   tags:
   - rock
   - door
+  - slider
+  - stopper
   layers:
   - Default
   - TransparentFX

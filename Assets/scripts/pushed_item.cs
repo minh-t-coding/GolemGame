@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 public class pushed_item : MonoBehaviour {
-	public GameObject player;
+	
 	Rigidbody rb;
 
 
