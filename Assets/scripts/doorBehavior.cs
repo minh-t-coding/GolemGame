@@ -10,7 +10,7 @@ public class doorBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Trigger.getPlates () == 1) {
+		if (Trigger.getPlates () == 2) {
 			Debug.Log ("Open");
 			Destroy(gameObject);
 		}
