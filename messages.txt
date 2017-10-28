@@ -1,0 +1,49 @@
+Intro:
+	Finally, the golem is energized...
+	Within this cave lie the ruins of an ancient alchemy lab.
+	The ruins contain a philosopher's stone capable of transmuting anything imaginable.
+	Try not to die while fetching it for me.
+
+If the player stays in the first room too long:
+	Don't make me wait, golem...
+
+Tutorial Notes:
+Basic jump:
+	I must jump onto the ledge to reach the Master's treasure...
+Don't touch the water:
+	If I fall into the water, I'll never be able to reach the Master's treasure...
+
+The rune door:
+	These runes aren't energized, but Master's treasure is behind the door.
+	My own earth enegy will energize the earth rune, but I'll need to find something to energize the others...
+	I must find the Master's treasure...
+
+Eventual revelation-inducing notes:
+First:
+	That trap almost knocked me into the water.
+	I must not fail Master...
+
+Second:
+	I must break through that rotting door.
+	I need to find Master's treasure...
+
+Third:
+	I must destroy that ancient golem standing guard.
+	The Master's treasure must be near...
+
+After the stone:
+	The stone...
+	It transformed me...
+	I've become a person, like Master...
+	I need to bring this to Master, he'll be very pleased.
+
+Before the skeletons:
+	Without the elemental energy I controlled as a golem,
+	I will not be able to return to Master the same way I came...
+
+On one of the skeletons:
+	There are so many of them, did Master send them all?
+
+On several skeletons:	
+	Master will never get his treasure now...
+	I have failed him...
