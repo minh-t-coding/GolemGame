@@ -23,36 +23,11 @@ public class Charactermoving : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate(){
-		if (Input.GetKey(KeyCode.UpArrow)){
-		Vector3 movement = new Vector3 (0,0,1f);
+		float moveHirozental = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+		Vector3 movement = new Vector3 (moveHirozental,0,moveVertical);
 		rb.velocity = movement * movingspeed;
-			Invoke ("stop_moving",0.001f);
-			transform.Rotate (0,0,-180f);
-		}
-		if (Input.GetKey(KeyCode.DownArrow)){
-			Vector3 movement = new Vector3 (0,0,-1f);
-			rb.velocity = movement * movingspeed;
-			Invoke ("stop_moving",0.001f);
-			transform.Rotate (0,0,-180f);
-		}
-		if (Input.GetKey(KeyCode.RightArrow)){
-			Vector3 movement = new Vector3 (1f,0,0);
-			rb.velocity = movement * movingspeed;
-			Invoke ("stop_moving",0.001f);
-			transform.Rotate (0,0,-180f);
-		}
-		if (Input.GetKey(KeyCode.LeftArrow)){
-			Vector3 movement = new Vector3 (-1f,0,0);
-			rb.velocity = movement * movingspeed;
-			Invoke ("stop_moving",0.001f);
-			transform.Rotate (0,0,180f);
-		}
 
-		}
-	void stop_moving (){
-		rb.velocity = new Vector3 (0,0,0);
 	
 	}
-	
-	}
-
+}
