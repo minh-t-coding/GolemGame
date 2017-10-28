@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: 27b279bb3e1f24e4599f706a36baffbd
+timeCreated: 1509178629
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube_001
+    100004: Cube_002
+    100006: Cube_003
+    100008: Cube_004
+    100010: Cube_005
+    100012: Cube_006
+    100014: Cube_007
+    100016: Cylinder
+    100018: Cylinder_001
+    100020: Cylinder_002
+    100022: Cylinder_003
+    100024: Cylinder_004
+    100026: Cylinder_005
+    100028: //RootNode
+    100030: Armature
+    100032: Bone
+    100034: Bone_001
+    100036: Bone_002
+    100038: Bone_003
+    100040: Bone_004
+    100042: Bone_005
+    100044: Bone_006
+    100046: Bone_007
+    100048: Bone_008
+    100050: Bone_009
+    100052: Bone_010
+    100054: Bone_011
+    100056: Bone_012
+    100058: Bone_013
+    100060: Bone_014
+    100062: Cylinder_004_MeshPart0
+    100064: Cylinder_004_MeshPart1
+    100066: Cylinder_004_MeshPart2
+    100068: Plane
+    400000: Cube
+    400002: Cube_001
+    400004: Cube_002
+    400006: Cube_003
+    400008: Cube_004
+    400010: Cube_005
+    400012: Cube_006
+    400014: Cube_007
+    400016: Cylinder
+    400018: Cylinder_001
+    400020: Cylinder_002
+    400022: Cylinder_003
+    400024: Cylinder_004
+    400026: Cylinder_005
+    400028: //RootNode
+    400030: Armature
+    400032: Bone
+    400034: Bone_001
+    400036: Bone_002
+    400038: Bone_003
+    400040: Bone_004
+    400042: Bone_005
+    400044: Bone_006
+    400046: Bone_007
+    400048: Bone_008
+    400050: Bone_009
+    400052: Bone_010
+    400054: Bone_011
+    400056: Bone_012
+    400058: Bone_013
+    400060: Bone_014
+    400062: Cylinder_004_MeshPart0
+    400064: Cylinder_004_MeshPart1
+    400066: Cylinder_004_MeshPart2
+    400068: Plane
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cube_003
+    2300008: Cube_004
+    2300010: Cube_005
+    2300012: Cube_006
+    2300014: Cube_007
+    2300016: Cylinder
+    2300018: Cylinder_001
+    2300020: Cylinder_002
+    2300022: Cylinder_003
+    2300024: Cylinder_004
+    2300026: Cylinder_005
+    2300028: Plane
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cube_003
+    3300008: Cube_004
+    3300010: Cube_005
+    3300012: Cube_006
+    3300014: Cube_007
+    3300016: Cylinder
+    3300018: Cylinder_001
+    3300020: Cylinder_002
+    3300022: Cylinder_003
+    3300024: Cylinder_004
+    3300026: Cylinder_005
+    3300028: Plane
+    4300000: Cube_006
+    4300002: Cylinder_002
+    4300004: Cylinder
+    4300006: Cube
+    4300008: Cube_002
+    4300010: Cube_001
+    4300012: Cube_003
+    4300014: Cube_004
+    4300016: Cube_005
+    4300018: Cylinder_001
+    4300020: Cylinder_003
+    4300022: Cylinder_004
+    4300024: Cylinder_005
+    4300026: Cube_007
+    4300028: Plane
+    4300030: Cylinder_004_MeshPart0
+    4300032: Cylinder_004_MeshPart1
+    4300034: Cylinder_004_MeshPart2
+    7400000: Default Take
+    7400002: moving
+    7400004: standing_still
+    7400006: moving (1)
+    9500000: //RootNode
+    13700000: Cylinder_004_MeshPart0
+    13700002: Cylinder_004_MeshPart1
+    13700004: Cylinder_004_MeshPart2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 30
+      lastFrame: 57
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: moving
+      takeName: moving
+      firstFrame: -1
+      lastFrame: 82
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: standing_still
+      takeName: standing_still
+      firstFrame: -1
+      lastFrame: 15.4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
