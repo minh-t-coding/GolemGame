@@ -1438,6 +1438,7 @@ GameObject:
   - component: {fileID: 1532866554}
   - component: {fileID: 1532866553}
   - component: {fileID: 1532866552}
+  - component: {fileID: 1532866556}
   m_Layer: 0
   m_Name: Water (1)
   m_TagString: Untagged
@@ -1487,8 +1488,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.84909797, z: 1}
+  m_Center: {x: 0, y: -0.07545283, z: 0}
 --- !u!33 &1532866554
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1509,6 +1510,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -2.5, z: 0}
+--- !u!114 &1532866556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532866551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a75e3b093df91f48aa88997bc46cd1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1584220534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,11 +2258,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80
+      value: -30.9
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2547,8 +2559,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.60792226, z: 1}
+  m_Center: {x: 0, y: -0.19604005, z: 0}
 --- !u!33 &2031584057
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2563,7 +2575,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031584054}
   m_LocalRotation: {x: 0, y: -0.0218148, z: 0, w: 0.99976206}
-  m_LocalPosition: {x: -11, y: 0, z: 0}
+  m_LocalPosition: {x: -11, y: 0.9, z: 0}
   m_LocalScale: {x: 7.5, y: 15, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
