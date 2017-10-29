@@ -1,39 +1,120 @@
-using System.Collections;
-using System.Collections;
+
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
 public class Charactermoving : MonoBehaviour {
-	private CharacterController controller;
+	private Rigidbody rb;
+	Animator ani;
 
-	private float verticalVelocity;
-	private float gravity = 25f;
-	private float jumpForce = 10f;
+	public float pushPower = 2.0F;
 
-	public float speed = 10f;
+	[SerializeField]
+	public float movingspeed;
+	public bool canJump;
+	Collider col;
+	public bool is_ground;
+	[SerializeField]
+	float jumpingforce;
 
-	private void Start(){
-		controller = GetComponent<CharacterController>();
+
+
+	// Use this for initialization
+	void Start () {
+		is_ground = true;
+		rb = GetComponent<Rigidbody>();
+		ani = GetComponent<Animator> ();
 	}
+	
+	// Update is called once per frame
+	void FixedUpdate ()
+	{	/*if (!Physics.Raycast(transform.position,Vector3.down)){
+			is_ground = true;
+		}*/
+		rb.AddForce (0f, -400f, 0f);
+		float moveHirozental = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+		Vector3 movement = new Vector3 (moveHirozental, 0, moveVertical);
+		rb.velocity = movement * movingspeed;
 
-	private void Update(){
-		float x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
-		float z = Input.GetAxis ("Vertical") * speed * Time.deltaTime;
-
-
-		if (controller.isGrounded) {
-			verticalVelocity = -1 * Time.deltaTime;
-			if (Input.GetButtonDown ("Jump")) {
-				verticalVelocity = 20 * Time.deltaTime;
+		if (Input.GetKey (KeyCode.D)) {
+			transform.rotation = Quaternion.Euler (0, 180, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
 			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.A)) {
+			transform.rotation = Quaternion.Euler (0, 0, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.S)) {
+			transform.rotation = Quaternion.Euler (0, 270, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.W)) {
+			transform.rotation = Quaternion.Euler (0, 90, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
+			transform.rotation = Quaternion.Euler (0, 45, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.S)) {
+			transform.rotation = Quaternion.Euler (0, 315, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
+			transform.rotation = Quaternion.Euler (0, 135, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.S)) {
+			transform.rotation = Quaternion.Euler (0, 225, 0);
+			if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+				//Input.GetKeyDown(KeyCode.Space)
+				rb.AddForce (0f, jumpingforce * 10, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		//-------------------------------------
+
+		else if (Input.GetKeyDown (KeyCode.Space) && canJump) {
+			//rb.AddForce (0f, jumpingforce, 0f);
+			bounce();
 		} else {
-			//verticalVelocity -= 1 * Time.deltaTime;
-			verticalVelocity -= Time.deltaTime;
+			ani.SetBool ("run", false);
 		}
 
-		Vector3 moveDelta = new Vector3 (x, verticalVelocity, z);
-		//transform.Rotate (Vector3(1, 0, 0));//, Time.deltaTime, Space.World);
-		//transform.Rotate (Vector3.right, Time.deltaTime, Space.World);
-		controller.Move (moveDelta);
+	}
+
+	void OnCollisionEnter (Collision other){
+		canJump = true;
+	}
+
+	void OnCollisionExit (Collision other){
+		canJump = false;
+	}
+
+	void bounce(){
+		transform.Translate (Vector3.up * 260 * Time.deltaTime, Space.World);
 	}
 }

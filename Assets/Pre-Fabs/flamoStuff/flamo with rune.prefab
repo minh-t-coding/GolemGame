@@ -878,7 +878,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b8207757eb424438e5b4c946337259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  pushPower: 2
+  movingspeed: 0
+  canJump: 0
+  is_ground: 0
+  jumpingforce: 0
 --- !u!137 &137775168724180812
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
