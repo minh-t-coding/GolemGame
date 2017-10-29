@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 65327643731366424}
   - component: {fileID: 114971440282465996}
   m_Layer: 0
-  m_Name: flamo 1
+  m_Name: flamo with rune
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
