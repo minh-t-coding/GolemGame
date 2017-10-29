@@ -12,9 +12,7 @@ public class waterKill : MonoBehaviour {
 	public GameObject Rocko;
 	// Use this for initialization
 	void Start () {
-		x = -80f;
-		y = 0f;
-		z = 0f;
+		
 	}
 
 	// Update is called once per frame
