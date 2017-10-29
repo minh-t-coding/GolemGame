@@ -10,6 +10,8 @@ public class Charactermoving : MonoBehaviour {
 
 	public float pushPower = 2.0F;
 
+	public int jumpCooldown = 1;
+ 
 	[SerializeField]
 	public float movingspeed;
 	Collider col;
@@ -37,6 +39,7 @@ public class Charactermoving : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveHirozental, 0, moveVertical);
 		rb.velocity = movement * movingspeed;
 
+		/*
 		if (Input.GetKey (KeyCode.D)) {
 			transform.rotation = Quaternion.Euler (0, 180, 0);
 			ani.SetBool ("run", true);
@@ -66,17 +69,86 @@ public class Charactermoving : MonoBehaviour {
 			ani.SetBool ("run", true);
 		}
 		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.S)) {
-			transform.rotation = Quaternion.Euler (0, 225, 0);
+		transform.rotation = Quaternion.Euler (0, 225, 0);
 			ani.SetBool ("run", true);
 		}
-		else if (Input.GetKey (KeyCode.Space) && is_ground) {
-			rb.AddForce (0f, jumpingforce, 0f);
+	*/
+
+		//-------------------------------------
+		if (Input.GetKey (KeyCode.D)) {
+			transform.rotation = Quaternion.Euler (0, 180, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
 			ani.SetBool ("run", true);
+		} 
+		else if (Input.GetKey (KeyCode.A)) {
+			transform.rotation = Quaternion.Euler (0, 0, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.S)) {
+			transform.rotation = Quaternion.Euler (0, 270, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.W)) {
+			transform.rotation = Quaternion.Euler (0, 90, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
+			transform.rotation = Quaternion.Euler (0, 45, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.S)) {
+			transform.rotation = Quaternion.Euler (0, 315, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
+			transform.rotation = Quaternion.Euler (0, 135, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		else if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.S)) {
+			transform.rotation = Quaternion.Euler (0, 225, 0);
+			if (Input.GetKey (KeyCode.Space)) {
+				rb.AddForce (0f, jumpingforce, 0f);
+			}
+			ani.SetBool ("run", true);
+		}
+		//-------------------------------------
+
+		else if (Input.GetKey (KeyCode.Space) && is_ground) {
+			//System.Threading.Thread.Sleep (jumpCooldown);
+			//Invoke (rb.AddForce (0f, jumpingforce, 0f), jumpCooldown);
+			//WaitForSeconds (jumpCooldown);
+			//Debug.Log ("Space pressed");
+			//if(Time.deltaTime > jumpCooldown){
+				//Debug.Log ("inside");
+			rb.AddForce (0f, jumpingforce, 0f);
+			//ani.SetBool ("run", true); //remember to make this a jump
 			// = false;
+			//}
 		} else {
 			ani.SetBool ("run", false);
 		}
 
 	}
+		
 }
 
