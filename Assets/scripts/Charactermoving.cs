@@ -32,7 +32,7 @@ public class Charactermoving : MonoBehaviour {
 		}
 
 		Vector3 moveDelta = new Vector3 (x, verticalVelocity, z);
-		transform.Rotate (Vector3(1, 0, 0));//, Time.deltaTime, Space.World);
+		//transform.Rotate (Vector3(1, 0, 0));//, Time.deltaTime, Space.World);
 		//transform.Rotate (Vector3.right, Time.deltaTime, Space.World);
 		controller.Move (moveDelta);
 	}
