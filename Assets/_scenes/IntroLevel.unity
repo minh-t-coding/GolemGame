@@ -395,10 +395,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462952460}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
+  m_Convex: 0
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -884,8 +884,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1388,8 +1388,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1438,7 +1438,6 @@ GameObject:
   - component: {fileID: 1532866554}
   - component: {fileID: 1532866553}
   - component: {fileID: 1532866552}
-  - component: {fileID: 1532866556}
   m_Layer: 0
   m_Name: Water (1)
   m_TagString: Untagged
@@ -1459,7 +1458,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e633a20421c47426aa04444234225b69, type: 2}
+  - {fileID: 2100000, guid: 1c855ddfefc5c4b4bbd3157c8f6ef9d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1488,8 +1487,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.84909797, z: 1}
-  m_Center: {x: 0, y: -0.07545283, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1532866554
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1510,17 +1509,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -2.5, z: 0}
---- !u!114 &1532866556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1532866551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a75e3b093df91f48aa88997bc46cd1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1584220534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,11 +2246,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.9
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2291,10 +2279,6 @@ Prefab:
     - target: {fileID: 9500000, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27b279bb3e1f24e4599f706a36baffbd, type: 3}
@@ -2325,8 +2309,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2509,13 +2493,12 @@ GameObject:
   - component: {fileID: 2031584057}
   - component: {fileID: 2031584056}
   - component: {fileID: 2031584055}
-  - component: {fileID: 2031584059}
   m_Layer: 0
   m_Name: Water
-  m_TagString: water
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &2031584055
 MeshRenderer:
@@ -2530,7 +2513,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e633a20421c47426aa04444234225b69, type: 2}
+  - {fileID: 2100000, guid: 1c855ddfefc5c4b4bbd3157c8f6ef9d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2540,7 +2523,7 @@ MeshRenderer:
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 1
+  m_ImportantGI: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2557,10 +2540,10 @@ BoxCollider:
   m_GameObject: {fileID: 2031584054}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.60792226, z: 1}
-  m_Center: {x: 0, y: -0.19604005, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2031584057
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2575,28 +2558,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031584054}
   m_LocalRotation: {x: 0, y: -0.0218148, z: 0, w: 0.99976206}
-<<<<<<< HEAD
   m_LocalPosition: {x: -11, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 15, z: 30}
-=======
-  m_LocalPosition: {x: -11, y: 0.9, z: 0}
   m_LocalScale: {x: 7.5, y: 15, z: 30}
->>>>>>> 7fed0b96f8947713f0aed6471e3800caaf828463
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: -2.5, z: 0}
---- !u!114 &2031584059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2031584054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a75e3b093df91f48aa88997bc46cd1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2048229052
 GameObject:
   m_ObjectHideFlags: 0
